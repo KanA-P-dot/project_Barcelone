@@ -1,22 +1,22 @@
-// Tableau pour stocker les éléments du panier
+// Table for storing basket items
 let cartItems = [
     { name: "Produit 1", price: 20.00, quantity: 2 },
     { name: "Produit 2", price: 15.00, quantity: 1 }
 ];
 
-// Fonction pour afficher le panier
+// Function for displaying the basket
 function displayCart() {
     const cartContainer = document.querySelector(".cart");
 
-    // Réinitialise le contenu du panier
+    // Resets the contents of the basket
     cartContainer.innerHTML = "";
 
-    // Parcourt les éléments du panier et les affiche
+    // Scrolls through the items in the basket and displays them
     cartItems.forEach(item => {
         const cartItem = document.createElement("div");
         cartItem.className = "cart-item";
 
-        // Crée la structure HTML pour chaque élément du panier
+        // Creates the HTML structure for each item in the basket
         cartItem.innerHTML = `
             <img src="product-image.jpg" alt="${item.name}">
             <div class="item-details">
@@ -30,29 +30,29 @@ function displayCart() {
             <button class="quantity-button" onclick="incrementQuantity(this)">+</button>
         `;
 
-        // Ajoute l'élément du panier au conteneur du panier
+        // Adds the basket item to the basket container
         cartContainer.appendChild(cartItem);
     });
 
-    // Met à jour le total
+    // Updates the total
     updateTotal();
 }
 
-// Fonction pour supprimer un élément du panier
+// Function for removing an item from the basket
 function removeItem(button) {
     const index = Array.from(button.parentElement.parentElement.children).indexOf(button.parentElement);
     cartItems.splice(index, 1);
     displayCart();
 }
 
-// Fonction pour incrémenter la quantité d'un élément du panier
+// Function for incrementing the quantity of an item in the basket
 function incrementQuantity(button) {
     const index = Array.from(button.parentElement.parentElement.children).indexOf(button.parentElement);
     cartItems[index].quantity++;
     displayCart();
 }
 
-// Fonction pour décrémenter la quantité d'un élément du panier
+// Function for decreasing the quantity of an item in the basket
 function decrementQuantity(button) {
     const index = Array.from(button.parentElement.parentElement.children).indexOf(button.parentElement);
     if (cartItems[index].quantity > 1) {
@@ -61,12 +61,12 @@ function decrementQuantity(button) {
     }
 }
 
-// Fonction pour calculer et afficher le total
+// Function for calculating and displaying the total
 function updateTotal() {
     const totalElement = document.querySelector(".cart-total p");
     const total = cartItems.reduce((acc, item) => acc + (item.price * item.quantity), 0);
     totalElement.textContent = `Total : $${total.toFixed(2)}`;
 }
 
-// Appel initial pour afficher le panier
+// Initial call to display the basket
 displayCart();
