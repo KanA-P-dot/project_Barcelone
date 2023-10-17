@@ -56,33 +56,39 @@ nav {
     position: relative;
 }
 
-.dropdown:hover .submenu {
-    display: block;
+ /* Style de base pour le menu déroulant */
+ .dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.submenu {
+
+/* Style du contenu du menu déroulant */
+.dropdown-content {
     display: none;
     position: absolute;
-    background-color: #333;
-    list-style: none;
-    margin-top: 10px;
-    left: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
 }
 
-.submenu li {
-    margin: 0;
-    padding: 10px;
-}
-
-.submenu a {
-    color: #fff;
+/* Style des éléments du menu déroulant */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
     text-decoration: none;
     display: block;
-    transition: background-color 0.3s ease;
 }
 
-.submenu a:hover {
-    background-color: #ff6600;
+/* Change la couleur de l'élément lorsque la souris passe dessus */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Affiche le menu déroulant lorsque le bouton est survolé */
+.dropdown:hover .dropdown-content {
+    display: block;
 }
 
 /* Hero section styles */
