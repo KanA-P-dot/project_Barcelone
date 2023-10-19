@@ -6,14 +6,14 @@
     <title>School Stuff</title>
     <link rel="stylesheet" href="style2.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-    <script src="zoom.js"></script>
+   
 </head>
-<body> 
+<body>
     <header>
         <nav>
             <div class="logo">School stuff</div>
             <ul class="menu">
-                <li><a href="index.html">Home</a></li>
+                <li><a href="home.html">Home</a></li>
                 <li class="dropdown">
                     <a href="#">Classes</a>
                     <ul class="submenu">
@@ -28,66 +28,93 @@
                         <li><a href="#">3ème</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Contact</a></li>
-                <p><a href="cart.html"></h><i class="fas fa-shopping-cart"></i></a></p>
+                <li><a href="#"></a></li>
+                <p><a href="panier.html"></h><i class="fas fa-shopping-cart"></i></a></p>
             </ul>
         </nav>
     </header>
-<div id="header">
+
     <img src="https://awik.io/demo/webshop-zoom/star_logo.png">
-  </div>
-  
-  <div class="columns">
-  
-    <div class="column">
-        <div class="thumbnail-container">
-          <img class="drift-demo-trigger" data-zoom="https://awik.io/demo/webshop-zoom/shoe-large.jpg" src="https://spacenet.tn/64569-large_default/pack-scolaire-5en1-charlotte-sac-a-dos-panier-a-gouter-chariot-lunchbox-trousse.jpg">
-        </div>
-    </div>
-  
-    <div class="column">
-      <div class="details">
-        <h1>PACK BACK TO SCHOOL (pink)</h1>
-        <p class="price">$89.99</p>
-        <p class="description">Pack including a rucksack and various essential items for your child's back to school!</p>
-  
-  
-  
-        <div class="columns">
-  
-          <div class="column" id="wishlist-container">
-  
-            <button class="button">
-              <span class="icon is-small">
-                  <i class="fas fa-heart"></i>
-                </span>
-                <span>ADD TO WISHLIST</span>
-            </button>
-  
-          </div>
-          
-          <div class="column" id="buy-container">
-          <a href="cart.html">
-            <button class="button buy-button">
-              <span class="icon is-small">
-                  <i class="fas fa-shopping-bag"></i>
-                </span>
-                <span>ADD TO BAG</span>
-            </button>
-            </a>
-  
-          </div>
-  
-        </div>
-  
-        <p class="small-text"><span>Standard delivery</span> 2-5 working days</p>
-        <p class="small-text"><span>Next day delivery</span> order before 2pm ($5.79)</p>
-  
+</div>
+
+<div class="columns">
+
+  <div class="column">
+      <div class="thumbnail-container">
+        <img class="drift-demo-trigger" data-zoom="https://awik.io/demo/webshop-zoom/shoe-large.jpg" src="https://spacenet.tn/64569-large_default/pack-scolaire-5en1-charlotte-sac-a-dos-panier-a-gouter-chariot-lunchbox-trousse.jpg">
       </div>
-    </div>
-  
   </div>
-  
-  <p class="small-text" style=" text-align: center; padding-top: 30px; padding-bottom: 15px;">Zoom plugin: <a href="" target="_blank">Drift</a></p>
+
+  <div class="column">
+    <div class="produit">
+      <h1>PACK BACK TO SCHOOL (pink)</h1>
+      <p class="price">$89.99</p>
+      <p class="description">Pack including a rucksack and various essential items for your child's back to school!</p>
+
+
+
+      <div class="columns">
+
+        <div class="column" id="wishlist-container">
+
+          <button class="button">
+            <span class="icon is-small">
+                <i class="fas fa-heart"></i>
+              </span>
+              <span>ADD TO WISHLIST</span>
+          </button>
+
+        </div>
+        
+        <div class="column" id="buy-container">
+        
+          <button class="button buy-button" onclick="ajouterAuPanier('Produit 3', 89.99)">
+            <span class="icon is-small">
+                <i class="fas fa-shopping-bag"></i>
+              </span>
+              
+          </button>
+          
+
+        </div>
+
+      </div>
+
+      <p class="small-text"><span>Standard delivery</span> 2-5 working days</p>
+      <p class="small-text"><span>Next day delivery</span> order before 2pm ($5.79)</p>
+
+    </div>
+  </div>
+
+</div>
+
+<p class="small-text" style=" text-align: center; padding-top: 30px; padding-bottom: 15px;">Zoom plugin: <a href="" target="_blank">Drift</a></p>
 </body> 
-    </html> 
+
+    <h1>Produits</h1>
+    <div class="produit">
+        <h2>Nom du produit 1</h2>
+        <p>Prix: 19.99 $</p>
+        <button onclick="ajouterAuPanier('Produit 1', 19.99)">Ajouter au panier</button>
+    </div>
+
+    <div class="produit">
+        <h2>Nom du produit 2</h2>
+        <p>Prix: 29.99 $</p>
+        <button onclick="ajouterAuPanier('Produit 2', 29.99)">Ajouter au panier</button>
+    </div>
+
+    <a href="panier.html">Voir le panier</a>
+
+    <script>
+        function ajouterAuPanier(nom, prix) {
+            var produit = { nom: nom, prix: prix };
+            var panier = JSON.parse(localStorage.getItem("panier")) || [];
+            panier.push(produit);
+            localStorage.setItem("panier", JSON.stringify(panier));
+        }
+    </script>
+
+    
+</body>
+</html>

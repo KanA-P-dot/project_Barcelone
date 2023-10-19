@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panier</title>
+   
+</head>
+<body>
+    <h1>Panier</h1>
+    <div id="panier"></div>
+    <script>
+        var panier = JSON.parse(localStorage.getItem("panier")) || [];
+
+        function supprimerDuPanier(index) {
+            panier.splice(index, 1);
+            localStorage.setItem("panier", JSON.stringify(panier));
+            mettreAJourPanier();
+        }
+        
+        function mettreAJourPanier() {
+            var panierDiv = document.getElementById("panier");
+            panierDiv.innerHTML = "";
+        
+            for (var i = 0; i < panier.length; i++) {
+                var produit = panier[i];
+                var produitDiv = document.createElement("div");
+                produitDiv.innerHTML = "Nom: " + produit.nom + ", Prix: " + produit.prix;
+        
+                var boutonSupprimer = document.createElement("button");
+                boutonSupprimer.textContent = "Supprimer";
+                boutonSupprimer.onclick = (function(index) {
+                    return function() {
+                        supprimerDuPanier(index);
+                    };
+                })(i);
+        
+                produitDiv.appendChild(boutonSupprimer);
+                panierDiv.appendChild(produitDiv);
+            }
+        }
+        
+        mettreAJourPanier();
+    </script>
+    
+</body>
+</html>

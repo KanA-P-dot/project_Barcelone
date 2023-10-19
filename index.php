@@ -1,3 +1,13 @@
+<?php 
+  session_start(); 
+
+ 
+  if (isset($_GET['logout'])) {
+        session_destroy();
+        unset($_SESSION['username']);
+        header("location: login.php");
+  }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -27,8 +37,11 @@
                         <li><a href="#">3ème</a></li>
                     </ul>
                 </li>
-                <li><a href="#">Contact</a></li>
-                <p><a href="cart.html"></h><i class="fas fa-shopping-cart"></i></a></p>
+                <li><a href="#"><?php  if (isset($_SESSION['username'])) : ?>
+                    <p><strong><?php echo $_SESSION['username']; ?></strong></p>
+                    <p> <a href="home.html" style="color: red;">logout</a> </p>
+                <?php endif ?></a></li>
+                <p><a href="panier.html"></h><i class="fas fa-shopping-cart"></i></a></p>
             </ul>
         </nav>
     </header>
