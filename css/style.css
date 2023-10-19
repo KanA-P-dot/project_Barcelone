@@ -13,84 +13,59 @@ body {
 
 /* Header styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-}
-
-nav {
+    background-color: #203961; /* Couleur de fond du header */
+    color: #fff; /* Couleur du texte */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 10px 20px;
 }
 
 .logo {
-    font-size: 24px;
-    font-weight: bold;
+    display: flex;
+    align-items: center;
 }
 
-.menu {
+.logo img {
+    width: 50px; /* Ajustez la taille de l'image de votre logo */
+    height: 50px; /* Ajustez la taille de l'image de votre logo */
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+nav ul {
     list-style: none;
     display: flex;
 }
 
-.menu li {
-    margin-right: 20px;
+nav ul li {
+    margin: 0 10px;
 }
 
-.menu a {
-    text-decoration: none;
-    color: #fff;
-    transition: color 0.3s ease;
-}
-
-.menu a:hover {
-    color: #ff6600;
-}
-
-/* Drop-down menu styles */
-.dropdown {
+nav .dropdown {
     position: relative;
 }
 
- /* Style de base pour le menu déroulant */
- .dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-
-/* Style du contenu du menu déroulant */
-.dropdown-content {
+nav .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    top: 100%;
+    left: 0;
+    background-color: #007BFF; /* Couleur de fond du menu déroulant */
+    padding: 10px;
 }
 
-/* Style des éléments du menu déroulant */
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+a {
     text-decoration: none;
-    display: block;
+    color: #fff; /* Couleur du texte des liens */
 }
-
-/* Change la couleur de l'élément lorsque la souris passe dessus */
-.dropdown-content a:hover {
-    background-color: #ddd;
-}
-
-/* Affiche le menu déroulant lorsque le bouton est survolé */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
 /* Hero section styles */
 .hero {
     background-image: url('hero-image.jpg');
