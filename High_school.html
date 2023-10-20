@@ -6,7 +6,7 @@
     <title>High School Products</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <style>
-       body {
+        body {
             font-family: Arial, sans-serif;
         }
 
@@ -17,6 +17,7 @@
             width: 300px;
             display: inline-block;
             text-align: center;
+            border-radius: 10%;
         }
 
         .product-title {
@@ -101,8 +102,8 @@
         footer {
             text-align: center;
             padding: 20px 0;
-            background-color: #203961;
-            color: #fff;
+            background-color: #fff;
+            color: #000000;
         }
     </style>
 </head>
@@ -131,37 +132,42 @@
 
     <div class="product-card">
         <h2 class="product-title">Pack Back to School</h2>
-        <p>Price: 50€</p>
+        <img src="./Assets/PH.png" alt="Pack Back to School" class="product-image">
+        <p class="product-price">Price: 50€</p>
         <button class="add-to-cart-button" onclick="addToCart('Pack Back to School', 50)">Add to Cart</button>
     </div>
 
     <div class="product-card">
         <h2 class="product-title">Backpack (Schoolbag)</h2>
-        <p>Price: 40€</p>
+        <img src="./Assets/BPH.png" alt="Backpack (Schoolbag)" class="product-image">
+        <p class="product-price">Price: 40€</p>
         <button class="add-to-cart-button" onclick="addToCart('Backpack (Schoolbag)', 40)">Add to Cart</button>
     </div>
 
     <div class="product-card">
         <h2 class="product-title">Calculator</h2>
-        <p>Price: 20€</p>
+        <img src="./Assets/CSH.png" alt="Calculator" class="product-image">
+        <p class="product-price">Price: 20€</p>
         <button class="add-to-cart-button" onclick="addToCart('Calculator', 20)">Add to Cart</button>
     </div>
 
     <div class="product-card">
-        <h2 class="product-title">Dictionary (de langue?)</h2>
-        <p>Price: 15€</p>
-        <button class="add-to-cart-button" onclick="addToCart('Dictionary (de langue?)', 15)">Add to Cart</button>
+        <h2 class="product-title">Language Dictionary</h2>
+        <img src="./Assets/DLH.png" alt="Language Dictionary" class="product-image">
+        <p class="product-price">Price: 15€</p>
+        <button class="add-to-cart-button" onclick="addToCart('Language Dictionary', 15)">Add to Cart</button>
     </div>
 
     <div class="product-card">
-        <h2 class="product-title">PC</h2>
-        <p>Price: 400-1000€</p>
-        <button class="add-to-cart-button" onclick="addToCart('PC', '400-1000€')">Add to Cart</button>
+        <h2 class="product-title">Pencil-Case</h2>
+        <img src="./Assets/PCH.png" alt="PC" class="product-image">
+        <p class="product-price">Price: 10€</p>
+        <button class="add-to-cart-button" onclick="addToCart('Pencil-Case', '10€')">Add to Cart</button>
     </div>
 
     <script>
         function addToCart(product, price) {
-            // Ici, vous pouvez ajouter la logique pour ajouter le produit au panier.
+            // Vous pouvez ajouter ici la logique pour ajouter le produit au panier.
             // Vous pouvez utiliser JavaScript pour gérer le panier, par exemple, en utilisant des tableaux.
             // Le produit et le prix peuvent être passés en tant que paramètres de cette fonction.
         }
