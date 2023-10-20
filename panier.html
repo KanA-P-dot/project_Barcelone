@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style4.css">
+    <link rel="stylesheet" href="./css/panier.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
 
     <title>Panier</title>
@@ -37,12 +38,19 @@
                 </ul>
             </nav>
         </header>
-        <h1>Mon Panier</h1>
+        <div class="allbox">
+            <div class="content">
+                <br>
+                <h1 class="obj">Mon Panier</h1>
+                <br>
     
-        <div id="panier">
+                <div id="panier" class="obj">
+                </div>
+            
+                <button onclick="viderPanier()" class="obj">Vider le panier</button>
+            </div>
         </div>
-    
-        <button onclick="viderPanier()">Vider le panier</button>
+
     
     
     <script>
