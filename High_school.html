@@ -5,7 +5,107 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>High School Products</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
-    <link rel="stylesheet" href="./css/categories.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .product-card {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 10%;
+        }
+
+        .product-title {
+            font-weight: bold;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-price {
+            font-weight: bold;
+        }
+
+        .add-to-cart-button {
+            background-color: #0074cc;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .add-to-cart-button:hover {
+            background-color: #0056a3;
+        }
+            /* Header styles */
+        header {
+            background-color: #203961; /* Couleur de fond du header */
+            color: #fff; /* Couleur du texte */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 50px; /* Ajustez la taille de l'image de votre logo */
+            height: 50px; /* Ajustez la taille de l'image de votre logo */
+            margin-right: 10px;
+        }
+
+        h1 {
+            font-size: 24px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        nav .dropdown {
+            position: relative;
+        }
+
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #007BFF; /* Couleur de fond du menu déroulant */
+            padding: 10px;
+        }
+
+        nav .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff; /* Couleur du texte des liens */
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #fff;
+            color: #000000;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -25,7 +125,7 @@
                     </ul>
                 </li>
                 <li><a href="login.html">Login</a></li>
-                <p><a href="cart.html"></h><i class="fas fa-shopping-cart"></i></a></p>
+                <p><a href="panier.html"></h><i class="fas fa-shopping-cart"></i></a></p>
             </ul>
         </nav>
     </header>
@@ -34,47 +134,48 @@
         <h2 class="product-title">Pack Back to School</h2>
         <img src="./Assets/PH.png" alt="Pack Back to School" class="product-image">
         <p class="product-price">Price: 50€</p>
-        <button class="add-to-cart-button" onclick="addToCart('Pack Back to School', 50)">Add to Cart</button>
-        <a href="#" class="buy-button">Buy now</a>
+        <button class="add-to-cart-button" onclick="ajouterAuPanier('Pack Back to School', 50)">Add to Cart</button>
+        <a href="https://buy.stripe.com/test_eVa2aW9uGfhGfsc28e" class="buy-button">Buy now</a>
     </div>
 
     <div class="product-card">
         <h2 class="product-title">Backpack (Schoolbag)</h2>
         <img src="./Assets/BPH.png" alt="Backpack (Schoolbag)" class="product-image">
         <p class="product-price">Price: 40€</p>
-        <button class="add-to-cart-button" onclick="addToCart('Backpack (Schoolbag)', 40)">Add to Cart</button>
-        <a href="#" class="buy-button">Buy now</a>
+        <button class="add-to-cart-button" onclick="ajouterAuPanier('Backpack (Schoolbag)', 40)">Add to Cart</button>
+        <a href="https://buy.stripe.com/test_5kA3f0fT4fhG7ZK145" class="buy-button">Buy now</a>
     </div>
 
     <div class="product-card">
         <h2 class="product-title">Calculator</h2>
         <img src="./Assets/CSH.png" alt="Calculator" class="product-image">
-        <p class="product-price">Price: 20€</p>
-        <button class="add-to-cart-button" onclick="addToCart('Calculator', 20)">Add to Cart</button>
-        <a href="#" class="buy-button">Buy now</a>
+        <p class="product-price">Price: 90€</p>
+        <button class="add-to-cart-button" onclick="ajouterAuPanier('Calculator', 90)">Add to Cart</button>
+        <a href="https://buy.stripe.com/test_00gcPAgX86La93O8ww" class="buy-button">Buy now</a>
     </div>
 
     <div class="product-card">
         <h2 class="product-title">Language Dictionary</h2>
         <img src="./Assets/DLH.png" alt="Language Dictionary" class="product-image">
         <p class="product-price">Price: 15€</p>
-        <button class="add-to-cart-button" onclick="addToCart('Language Dictionary', 15)">Add to Cart</button>
-        <a href="#" class="buy-button">Buy now</a>
+        <button class="add-to-cart-button" onclick="ajouterAuPanier('Language Dictionary', 15)">Add to Cart</button>
+        <a href="https://buy.stripe.com/test_aEUcPA6iuedC1BmeV1" class="buy-button">Buy now</a>
     </div>
 
     <div class="product-card">
         <h2 class="product-title">Pencil-Case</h2>
         <img src="./Assets/PCH.png" alt="PC" class="product-image">
         <p class="product-price">Price: 10€</p>
-        <button class="add-to-cart-button" onclick="addToCart('Pencil-Case', '10€')">Add to Cart</button>
-        <a href="#" class="buy-button">Buy now</a>
+        <button class="add-to-cart-button" onclick="ajouterAuPanier('Pencil-Case', '10€')">Add to Cart</button>
+        <a href="https://buy.stripe.com/test_dR62aW0Yab1qeo8008" class="buy-button">Buy now</a>
     </div>
 
     <script>
-        function addToCart(product, price) {
-            // Vous pouvez ajouter ici la logique pour ajouter le produit au panier.
-            // Vous pouvez utiliser JavaScript pour gérer le panier, par exemple, en utilisant des tableaux.
-            // Le produit et le prix peuvent être passés en tant que paramètres de cette fonction.
+        function ajouterAuPanier(nom, prix) {
+            var produit = { nom: nom, prix: prix };
+            var panier = JSON.parse(localStorage.getItem("panier")) || [];
+            panier.push(produit);
+            localStorage.setItem("panier", JSON.stringify(panier));
         }
     </script>
 

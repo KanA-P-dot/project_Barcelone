@@ -25,56 +25,56 @@
                     </ul>
                 </li>
                 <li><a href="login.html">Login</a></li>
-                <p><a href="cart.html"></h><i class="fas fa-shopping-cart"></i></a></p>
+                <p><a href="panier.html"></h><i class="fas fa-shopping-cart"></i></a></p>
             </ul>
         </nav>
     </header>
-
         <div class="product-card">
             <h2 class="product-title">Pack Back to School</h2>
             <img src="./Assets/BPS.png" alt="Pack Back to School" class="product-image">
             <p class="product-price">Price: 40€</p>
-            <button class="add-to-cart-button" onclick="addToCart('Pack Back to School', 40)">Add to Cart</button>
-            <a href="#" class="buy-button">Buy now</a>
+            <button class="add-to-cart-button" onclick="ajouterAuPanier('Pack Back to School', 40)">Add to Cart</button>
+            <a href="https://buy.stripe.com/test_00g3f08qCglK2FqbIK" class="buy-button">Buy now</a>
         </div>
     
         <div class="product-card">
             <h2 class="product-title">School Backpack</h2>
             <img src="./Assets/PS.png" alt="School Backpack" class="product-image">
             <p class="product-price">Price: 30€</p>
-            <button class="add-to-cart-button" onclick="addToCart('School Backpack', 30)">Add to Cart</button>
-            <a href="#" class="buy-button">Buy now</a>
+            <button class="add-to-cart-button" onclick="ajouterAuPanier('School Backpack', 30)">Add to Cart</button>
+            <a href="https://buy.stripe.com/test_5kA3f0fT4fhG7ZK145" class="buy-button">Buy now</a>
         </div>
     
         <div class="product-card">
             <h2 class="product-title">School Affairs Geometry</h2>
             <img src="./Assets/GS.png" alt="School Affairs Geometry" class="product-image">
             <p class="product-price">Price: 10€</p>
-            <button class="add-to-cart-button" onclick="addToCart('School Affairs Geometry', 10)">Add to Cart</button>
-            <a href="#" class="buy-button">Buy now</a>
+            <button class="add-to-cart-button" onclick="ajouterAuPanier('School Affairs Geometry', 10)">Add to Cart</button>
+            <a href="https://buy.stripe.com/test_6oE16S8qCfhGcg08wz" class="buy-button">Buy now</a>
         </div>
     
         <div class="product-card">
             <h2 class="product-title">Pencil Case</h2>
             <img src="./Assets/PCS.png" alt="Pencil Case" class="product-image">
             <p class="product-price">Price: 10€</p>
-            <button class="add-to-cart-button" onclick="addToCart('Pencil Case', 10)">Add to Cart</button>
-            <a href="#" class="buy-button">Buy now</a>
+            <button class="add-to-cart-button" onclick="ajouterAuPanier('Pencil Case', 10)">Add to Cart</button>
+            <a href="https://buy.stripe.com/test_bIY6rc22eglK6VGfZ2" class="buy-button">Buy now</a>
         </div>
     
         <div class="product-card">
             <h2 class="product-title">Highlighters</h2>
             <img src="./Assets/HS.png" alt="Highlighters" class="product-image">
             <p class="product-price">Price: 4€</p>
-            <button class="add-to-cart-button" onclick="addToCart('Highlighters', 4)">Add to Cart</button>
-            <a href="#" class="buy-button">Buy now</a>
+            <button class="add-to-cart-button" onclick="ajouterAuPanier('Highlighters', 4)">Add to Cart</button>
+            <a href="https://buy.stripe.com/test_eVadTE9uGc5u6VG6ot" class="buy-button">Buy now</a>
         </div>
     
         <script>
-            function addToCart(product, price) {
-                // Vous pouvez ajouter ici la logique pour ajouter le produit au panier.
-                // Vous pouvez utiliser JavaScript pour gérer le panier, par exemple, en utilisant des tableaux.
-                // Le produit et le prix peuvent être passés en tant que paramètres de cette fonction.
+            function ajouterAuPanier(nom, prix) {
+                var produit = { nom: nom, prix: prix };
+                var panier = JSON.parse(localStorage.getItem("panier")) || [];
+                panier.push(produit);
+                localStorage.setItem("panier", JSON.stringify(panier));
             }
         </script>
         <footer>
