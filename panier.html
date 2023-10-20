@@ -47,8 +47,9 @@
                 <div id="panier" class="panier">
                 </div>
                 <div class="total">
-                    <h4>Total :</h4>
-                </div>
+                    <div class="total">
+                        <h4 id="total">Total :</h4>
+                    </div>
                 <div class="downcart">
                     <button onclick="viderPanier()">Empty the cart</button>
                     <button onclick="" class="chekout">Checkout</button>
@@ -65,13 +66,14 @@
             panier.splice(index, 1);
             localStorage.setItem("panier", JSON.stringify(panier));
             mettreAJourPanier();
+            calculerTotal();
         }
         function viderPanier() {
             panier = [];
             localStorage.setItem("panier", JSON.stringify(panier));
             mettreAJourPanier();
             }
-
+            
         
         function mettreAJourPanier() {
             var panierDiv = document.getElementById("panier");
@@ -95,7 +97,21 @@
             }
         }
         
+        function calculerTotal() {
+            var total = 0;
+    
+            for (var i = 0; i < panier.length; i++) {
+                total += panier[i].prix;
+            }
+
+            var totalDiv = document.querySelector(".total h4");
+            totalDiv.textContent = "Total : " + total + "€";
+        }
+
         mettreAJourPanier();
+        calculerTotal();
+
+
     </script>
     
 </body>
