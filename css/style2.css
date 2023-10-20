@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header styles */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ff6600;
+}
+
+/* Drop-down menu styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    list-style: none;
+    margin-top: 10px;
+    left: 0;
+}
+
+.submenu li {
+    margin: 0;
+    padding: 10px;
+}
+
+.submenu a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.submenu a:hover {
+    background-color: #ff6600;
+}
+
+/* Hero section styles */
+.hero {
+    background-image: url('hero-image.jpg');
+    background-size: cover;
+    text-align: center;
+    padding: 100px 0;
+    color: #fff;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+
+
+.hero p{
+    color:#333;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #ff4500;
+}
+
+/* Styles from the flagship products section */
+.featured-products {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px;
+}
+
+.featured-products h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+  }
+  
+  .price {
+    margin-bottom: 10px;
+  }
+  
+  .wrapper {
+    margin: 0 auto;
+    width: 860px;
+  }
+  
+  .columns {
+    margin: 0 auto;
+    max-width: 900px;
+  }
+  
+  .details {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+  }
+  
+  .thumbnail-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    float: left;
+  }
+  
+  .price {
+    font-size: 20px;
+    color: #777474;
+  }
+  
+  .wishlist-container {
+    padding-left: 0;
+  }
+  
+  #header {
+    width: 100%;
+    text-align: center;
+    background: white;
+    padding: 5px;
+    /*box-shadow: 0 10px 17px 0px #c0c0c0;*/
+    box-shadow: 0 5px 10px 0px #dbd7d7;
+  }
+  #header img {
+    max-width: 30px;
+  }
+  
+  .columns {
+    margin-top: 30px;
+  }
+  
+  .drift-demo-trigger {
+    max-width: 500px;
+  }
+  .button {
+    width: 100%;
+    border-radius: 0;
+  }
+  
+  .select, select {
+    width: 100%;
+    border-radius: 0 !important;
+  }
+  
+  #wishlist-container {
+    padding-left: 0;
+  }
+  
+  #buy-container {
+    padding-right: 0;
+  }
+  
+  .small-text {
+    font-size: 14px;
+  }
+  
+  .small-text span {
+    font-weight: bold;
+  }
+  
+  .buy-button {
+    background: #ff6900;
+    color: white;
+    border: none;
+  }
+  
+  .buy-button:hover, .buy-button:active, .buy-button:focus {
+    color: white;
+    opacity: 0.9;
+  }
+  
+  a {
+    color: #ff6900;
+  }
+  a:hover {
+    color: #ff6900;
+    opacity: 0.8;
+  }
+  
+  @media only screen and (max-width: 769px) {
+  
+    #wishlist-container, #buy-container {
+      padding: 0 0 15px 0;
+    }
+  }
