@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Primary Products</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .product-card {
+            border: 1px solid #ccc;
+            margin: 10px;
+            padding: 10px;
+            width: 300px;
+            display: inline-block;
+            text-align: center;
+        }
+
+        .product-title {
+            font-weight: bold;
+        }
+
+        .product-image {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product-price {
+            font-weight: bold;
+        }
+
+        .add-to-cart-button {
+            background-color: #0074cc;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        .add-to-cart-button:hover {
+            background-color: #0056a3;
+        }
+
+       /* Header styles */
+header {
+    background-color: #203961; /* Couleur de fond du header */
+    color: #fff; /* Couleur du texte */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Ajustez la taille de l'image de votre logo */
+    height: 50px; /* Ajustez la taille de l'image de votre logo */
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav .dropdown {
+    position: relative;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007BFF; /* Couleur de fond du menu déroulant */
+    padding: 10px;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #fff; /* Couleur du texte des liens */
+}
+        footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #203961;
+    color: #fff;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="Cute Colorful Baby Daycare Center Logo.png" alt="School Stuff">
+            <h1>School Stuff</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                    <a href="#">Categories</a>
+                    <ul class="dropdown-content">
+                        <li><a href="primary.html">Primary</a></li>
+                        <li><a href="middle.html">Middle</a></li>
+                        <li><a href="High_school.html">High School</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Login</a></li>
+                <p><a href="cart.html"></h><i class="fas fa-shopping-cart"></i></a></p>
+            </ul>
+        </nav>
+    </header>
+    <div class="product-card">
+        <h2 class="product-title">Pack Back to School</h2>
+        <img src="your-image-url-for-pack-back-to-school.jpg" alt="Pack Back to School" class="product-image">
+        <p class="product-price">Price: 30€</p>
+        <button class="add-to-cart-button" onclick="addToCart('Pack Back to School', 30)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <h2 class="product-title">Coloured Schoolbag</h2>
+        <img src="your-image-url-for-coloured-schoolbag.jpg" alt="Coloured Schoolbag" class="product-image">
+        <p class="product-price">Price: 20€</p>
+        <button class="add-to-cart-button" onclick="addToCart('Coloured Schoolbag', 20)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <h2 class="product-title">Exercise Books</h2>
+        <img src="your-image-url-for-exercise-books.jpg" alt="Exercise Books" class="product-image">
+        <p class="product-price">Price: 10€</p>
+        <button class="add-to-cart-button" onclick="addToCart('Exercise Books', 10)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <h2 class="product-title">Textbook for Children</h2>
+        <img src="your-image-url-for-textbook-for-children.jpg" alt="Textbook for Children" class="product-image">
+        <p class="product-price">Price: 10€</p>
+        <button class="add-to-cart-button" onclick="addToCart('Textbook for Children', 10)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <h2 class="product-title">Reading Booklets</h2>
+        <img src="your-image-url-for-reading-booklets.jpg" alt="Reading Booklets" class="product-image">
+        <p class="product-price">Price: 3€</p>
+        <button class="add-to-cart-button" onclick="addToCart('Reading Booklets', 3)">Add to Cart</button>
+    </div>
+
+    <div class="product-card">
+        <h2 class="product-title">Coloured Pencils</h2>
+        <img src="your-image-url-for-coloured-pencils.jpg" alt="Coloured Pencils" class="product-image">
+        <p class="product-price">Price: 3€</p>
+        <button class="add-to-cart-button" onclick="addToCart('Coloured Pencils', 3)">Add to Cart</button>
+    </div>
+
+    <script>
+        function addToCart(product, price) {
+            // Vous pouvez ajouter ici la logique pour ajouter le produit au panier.
+            // Vous pouvez utiliser JavaScript pour gérer le panier, par exemple, en utilisant des tableaux.
+            // Le produit et le prix peuvent être passés en tant que paramètres de cette fonction.
+        }
+    </script>
+    <footer>
+        <p>&copy; 2023 Alex/Mateo/Valentin. </p>
+    </footer>
+</body>
+</html>
