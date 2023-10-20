@@ -134,6 +134,7 @@ a {
         <img src="your-image-url-for-pack-back-to-school.jpg" alt="Pack Back to School" class="product-image">
         <p class="product-price">Price: 30€</p>
         <button class="add-to-cart-button" onclick="ajouterAuPanier('Pack Back to School', 30)">Add to Cart</button>
+        <a href="https://buy.stripe.com/test_14k9Do22e0mM2Fq8wF" class="buy-button">Buy now</a>
     </div>
 
     <div class="product-card">
@@ -141,6 +142,7 @@ a {
         <img src="your-image-url-for-coloured-schoolbag.jpg" alt="Coloured Schoolbag" class="product-image">
         <p class="product-price">Price: 20€</p>
         <button class="add-to-cart-button" onclick="ajouterAuPanier('Coloured Schoolbag', 20)">Add to Cart</button>
+        <a href="https://buy.stripe.com/test_5kAg1MbCO1qQgwgeV4" class="buy-button">Buy now</a>
     </div>
 
     <div class="product-card">
@@ -148,6 +150,7 @@ a {
         <img src="your-image-url-for-exercise-books.jpg" alt="Exercise Books" class="product-image">
         <p class="product-price">Price: 10€</p>
         <button class="add-to-cart-button" onclick="ajouterAuPanier('Exercise Books', 10)">Add to Cart</button>
+        <a href="https://buy.stripe.com/test_cN26rcdKW7Pe6VGdR1" class="buy-button">Buy now</a>
     </div>
 
     <div class="product-card">
@@ -155,13 +158,15 @@ a {
         <img src="your-image-url-for-textbook-for-children.jpg" alt="Textbook for Children" class="product-image">
         <p class="product-price">Price: 10€</p>
         <button class="add-to-cart-button" onclick="ajouterAuPanier('Textbook for Children', 10)">Add to Cart</button>
+        <a href="https://buy.stripe.com/test_14kg1MeP0d9y0xi8wI" class="buy-button">Buy now</a>
     </div>
 
     <div class="product-card">
-        <h2 class="product-title">Reading Booklets</h2>
+        <h2 class="product-title">book report</h2>
         <img src="your-image-url-for-reading-booklets.jpg" alt="Reading Booklets" class="product-image">
         <p class="product-price">Price: 3€</p>
         <button class="add-to-cart-button" onclick="ajouterAuPanier('Reading Booklets', 3)">Add to Cart</button>
+        <a href="https://buy.stripe.com/test_aEU5n87my3yY4Ny5kx" class="buy-button">Buy now</a>
     </div>
 
     <div class="product-card">
@@ -169,13 +174,15 @@ a {
         <img src="your-image-url-for-coloured-pencils.jpg" alt="Coloured Pencils" class="product-image">
         <p class="product-price">Price: 3€</p>
         <button class="add-to-cart-button" onclick="ajouterAuPanier('Coloured Pencils', 3)">Add to Cart</button>
+        <a href="https://buy.stripe.com/test_fZedTEfT45H693O8wK" class="buy-button">Buy now</a>
     </div>
 
     <script>
-        function addToCart(product, price) {
-            // Vous pouvez ajouter ici la logique pour ajouter le produit au panier.
-            // Vous pouvez utiliser JavaScript pour gérer le panier, par exemple, en utilisant des tableaux.
-            // Le produit et le prix peuvent être passés en tant que paramètres de cette fonction.
+        function ajouterAuPanier(nom, prix) {
+            var produit = { nom: nom, prix: prix };
+            var panier = JSON.parse(localStorage.getItem("panier")) || [];
+            panier.push(produit);
+            localStorage.setItem("panier", JSON.stringify(panier));
         }
     </script>
     <footer>
