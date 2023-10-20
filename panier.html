@@ -3,12 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style4.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+
     <title>Panier</title>
    
 </head>
 <body>
-    <h1>Panier</h1>
-    <div id="panier"></div>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Mon Panier</title>
+    </head>
+    <body>
+        <header>
+            <div class="logo">
+                <img src="Cute Colorful Baby Daycare Center Logo.png" alt="School Stuff">
+                <h1>School Stuff</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#">Categories</a>
+                        <ul class="dropdown-content">
+                            <li><a href="primary.html">Primary</a></li>
+                            <li><a href="middle.html">Middle</a></li>
+                            <li><a href="High_school.html">High School</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="login.html">login</a></li>
+                    <p><a href="panier.html"></h><i class="fas fa-shopping-cart"></i></a></p>
+                </ul>
+            </nav>
+        </header>
+        <h1>Mon Panier</h1>
+    
+        <div id="panier">
+        </div>
+    
+        <button onclick="viderPanier()">Vider le panier</button>
+    
+    
     <script>
         var panier = JSON.parse(localStorage.getItem("panier")) || [];
 
@@ -17,6 +53,12 @@
             localStorage.setItem("panier", JSON.stringify(panier));
             mettreAJourPanier();
         }
+        function viderPanier() {
+            panier = [];
+            localStorage.setItem("panier", JSON.stringify(panier));
+            mettreAJourPanier();
+            }
+
         
         function mettreAJourPanier() {
             var panierDiv = document.getElementById("panier");
