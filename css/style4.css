@@ -61,7 +61,7 @@ nav .dropdown:hover .dropdown-content {
     display: block;
 }
 
-a {
+header a {
     text-decoration: none;
     color: #fff; /* Couleur du texte des liens */
 }
