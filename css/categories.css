@@ -1,0 +1,123 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.product-card {
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+    width: 300px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10%;
+}
+
+.product-title {
+    font-weight: bold;
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-price {
+    font-weight: bold;
+}
+
+.add-to-cart-button {
+display: inline-block;
+padding: 5px 10px;
+background-color: #0074cc;
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+border-radius: 5px;
+transition: background-color 0.3s;
+border: none;
+}
+
+.add-to-cart-button:hover {
+    background-color: #0056a3;
+}
+
+/* Header styles */
+header {
+    background-color: #203961; /* Couleur de fond du header */
+    color: #fff; /* Couleur du texte */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px; /* Ajustez la taille de l'image de votre logo */
+    height: 50px; /* Ajustez la taille de l'image de votre logo */
+    margin-right: 10px;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav .dropdown {
+    position: relative;
+}
+
+nav .dropdown-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007BFF; /* Couleur de fond du menu déroulant */
+    padding: 10px;
+}
+
+nav .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #fff; /* Couleur du texte des liens */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #203961;
+    color: #fff;
+}
+
+/*buy button*/
+.buy-button {
+display: inline-block;
+padding: 5px 10px;
+background-color: #0074cc;
+color: #fff;
+text-decoration: none;
+font-weight: bold;
+border-radius: 5px;
+transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #0055aa;
+}
+
