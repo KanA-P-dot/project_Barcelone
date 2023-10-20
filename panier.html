@@ -14,7 +14,7 @@
     <!DOCTYPE html>
     <html>
     <head>
-        <title>Mon Panier</title>
+        <title>My Cart</title>
     </head>
     <body>
         <header>
@@ -41,13 +41,18 @@
         <div class="allbox">
             <div class="content">
                 <br>
-                <h1 class="obj">Mon Panier</h1>
+                <h1>My Cart</h1>
                 <br>
     
-                <div id="panier" class="obj">
+                <div id="panier" class="panier">
                 </div>
-            
-                <button onclick="viderPanier()" class="obj">Vider le panier</button>
+                <div class="total">
+                    <h4>Total :</h4>
+                </div>
+                <div class="downcart">
+                    <button onclick="viderPanier()">Empty the cart</button>
+                    <button onclick="" class="chekout">Checkout</button>
+                </div>
             </div>
         </div>
 
@@ -75,10 +80,10 @@
             for (var i = 0; i < panier.length; i++) {
                 var produit = panier[i];
                 var produitDiv = document.createElement("div");
-                produitDiv.innerHTML = "Nom: " + produit.nom + ", Prix: " + produit.prix;
+                produitDiv.innerHTML = "<strong>Name: &#xA0</strong>" + produit.nom + ", &#xA0<strong>Price:</strong>&#xA0 " + produit.prix + "€";
         
                 var boutonSupprimer = document.createElement("button");
-                boutonSupprimer.textContent = "Supprimer";
+                boutonSupprimer.textContent = "Remove";
                 boutonSupprimer.onclick = (function(index) {
                     return function() {
                         supprimerDuPanier(index);

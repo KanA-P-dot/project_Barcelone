@@ -4,6 +4,20 @@
     align-items: center;
 }
 
+.content {
+    background-color: rgb(157, 163, 163);
+    padding: 50px;
+    border-radius: 15px;
+    margin: 50px;
+    color: white;
+}
+
+.downcart {
+    display: flex;
+    justify-content: space-between;
+    margin: 0px 20px 0px 0px;
+}
+
 button {
     position: relative;
     display: flex;
@@ -12,7 +26,7 @@ button {
     width: 100px;
     height: 40px;
     border: none;
-    padding: 0px 20px;
+    padding: 0px 25px;
     background-color: rgb(38, 56, 94);
     color: white;
     font-weight: 500;
@@ -23,7 +37,11 @@ button {
   }
   
   button:hover {
-    color: transparent;
+    color: red;
+  }
+
+  .chekout:hover {
+    color: green;
   }
   
   button:hover svg {
@@ -37,9 +55,29 @@ button {
   button:active {
     transform: translate(3px , 3px);
     transition-duration: .3s;
-    box-shadow: 2px 2px 0px rgb(140, 32, 212);
+    box-shadow: 2px 2px 0px rgb(38, 56, 94,0.500);
   }
 
   button {
-    margin: 20px;
+    margin: 15px 0px 15px 15px;
+  }
+  .total {
+    margin: 10px 0px 10px 0px;
+    background-color: rgba(229, 229, 229, 0.803);
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    color: black;
+  }
+
+  .panier {
+    margin: 10px 0px 10px 0px;
+    background-color: rgba(229, 229, 229, 0.803);
+    padding: 10px 20px 10px 20px;
+    border-radius: 15px;
+    color: black;
+  }
+
+  .panier div {
+    display: flex;
+    align-items: center;
   }
