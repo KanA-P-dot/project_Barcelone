@@ -66,7 +66,7 @@
 
     <div class="product-card">
         <h2 class="product-title">book report</h2>
-        <img src="your-image-url-for-reading-booklets.jpg" alt="Reading Booklets" class="product-image">
+        <img src="./Assets/RBP.png" alt="Reading Booklets" class="product-image">
         <p class="product-price">Price: 3€</p>
         <button class="add-to-cart-button" onclick="ajouterAuPanier('Reading Booklets', 3)">Add to Cart</button>
         <a href="https://buy.stripe.com/test_aEU5n87my3yY4Ny5kx" class="buy-button">Buy now</a>
@@ -74,7 +74,7 @@
 
     <div class="product-card">
         <h2 class="product-title">Coloured Pencils</h2>
-        <img src="your-image-url-for-coloured-pencils.jpg" alt="Coloured Pencils" class="product-image">
+        <img src="./Assets/CPP.png" alt="Coloured Pencils" class="product-image">
         <p class="product-price">Price: 3€</p>
         <button class="add-to-cart-button" onclick="ajouterAuPanier('Coloured Pencils', 3)">Add to Cart</button>
         <a href="https://buy.stripe.com/test_fZedTEfT45H693O8wK" class="buy-button">Buy now</a>
@@ -88,8 +88,48 @@
             localStorage.setItem("panier", JSON.stringify(panier));
         }
     </script>
-    <footer>
-        <p>&copy; 2023 Alex/Mateo/Valentin. </p>
-    </footer>
+    <footer class="footer">
+        <div class="container">
+         <div class="row">
+           <div class="footer-col">
+             <h4>company</h4>
+             <ul>
+               <li><a href="#">about us</a></li>
+               <li><a href="#">our services</a></li>
+               <li><a href="#">privacy policy</a></li>
+               <li><a href="#">affiliate program</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>get help</h4>
+             <ul>
+               <li><a href="#">FAQ</a></li>
+               <li><a href="#">shipping</a></li>
+               <li><a href="#">returns</a></li>
+               <li><a href="#">order status</a></li>
+               <li><a href="#">payment options</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>online shop</h4>
+             <ul>
+               <li><a href="primary.html">Primary product</a></li>
+               <li><a href="middle">Medium School product</a></li>
+               <li><a href="High_school.html">High School Product</a></li>
+             </ul>
+           </div>
+           <div class="footer-col">
+             <h4>follow us</h4>
+             <div class="social-links">
+               <a href="#"><i class="fab fa-facebook-f"></i></a>
+               <a href="#"><i class="fab fa-twitter"></i></a>
+               <a href="#"><i class="fab fa-instagram"></i></a>
+               <a href="#"><i class="fab fa-linkedin-in"></i></a>
+             </div>
+           </div>
+         </div>
+        </div>
+     </footer>
+     
 </body>
 </html>
